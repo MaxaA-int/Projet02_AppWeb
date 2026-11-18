@@ -3,5 +3,25 @@
 /* CSS MAIN */
 
 @layer components {
+    .main {
 
+        .main__containeur {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-inline: 1rem;
+
+            h1 {
+                text-align: center;
+                padding-block: 3rem;
+                margin: 0;
+            }
+
+            .liste__haut {
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+    }
 }

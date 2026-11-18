@@ -5,7 +5,7 @@
 @layer components {
     nav.navigation-principale {
         background-color: var(--Bleu-mist);
-        padding-block: 2rem;
+        padding: 2rem 1rem;
 
         ul {
             padding: 0;
