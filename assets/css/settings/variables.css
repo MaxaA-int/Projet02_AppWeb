@@ -1,0 +1,18 @@
+/* VARIABLES */
+
+:root {
+  /* Couleurs */
+
+  /* Couleurs Principales */
+  --Bleu-deep: #17222E;
+  --Bleu-steel: #4F6B80;
+  --Bleu-mist: #A9B8C2;
+  --Orange: #C4482F;
+  --Orange-coral: #E58A78;
+  --Bleu-charbon: #23282D;
+
+  /* Couleurs Basiques */
+  --Blanc: #fff;
+  --Noir: #121111;
+  --Error: #DE1414DE1414;
+}

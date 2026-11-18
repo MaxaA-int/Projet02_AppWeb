@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* STYLE */
+
+/* 1. Déclaration de l'ordre de priorité des couches
+(du moins prioritaire au plus prioritaire) */
+@layer base, settings, components;
+
+/* 2. Importation des fichiers physiques dans les couches virtuelles */
+
+/* Dossier : css/base/ */
+@import url("base/normalize.css") layer(base);
+
+/* Dossier : css/settings/ */
+@import url("settings/general.css") layer(settings);
+@import url("settings/variables.css") layer(settings);
+
+/* Dossier : css/components/ */
+@import url("components/menu.css") layer(components);
+@import url("components/main.css") layer(components);
+@import url("components/footer.css") layer(components);
+
+
