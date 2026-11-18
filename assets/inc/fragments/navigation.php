@@ -1,44 +1,33 @@
-<!--<qc-piv-header title-text="Objectif Biodiversité Québec" title-url="https://www.quebec.ca/"-->
-<!--               alt-logo="Accédez à Québec.ca">-->
-<!--    <nav slot="links" aria-label="Navigation PIV">-->
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="#">-->
-<!--                    <img src="--><?php //echo $niveau?><!--assets/img/icons/loupe.svg" alt="Effectuer une recherche">-->
-<!--                </a>-->
-<!--            </li>-->
-<!--            <div class="uti">-->
-<!--                <li><a href="#fakeEnglish">English</a>-->
-<!--                </li>-->
-<!--                <li><a href="#">Nous joindre</a>-->
-<!--                </li>-->
-<!--            </div>-->
-<!--        </ul>-->
-<!--    </nav>-->
-<!--</qc-piv-header>-->
-<!---->
-<!--<div class="menu-principal__containeur">-->
-<!--    <nav class="nav-principale" aria-label="Menu Principal">-->
-<!--        <ul class="nav__list flex" id="navList">-->
-<!---->
-<!--            <li class="nav__list-item">-->
-<!--                <a href="--><?php //echo $niveau ?><!--index.php" class="nav__link nav__link--active"-->
-<!--                   aria-current="page">Accueil</a>-->
-<!--            </li>-->
-<!---->
-<!--            <li class="nav__list-item">-->
-<!--                <a href="--><?php //echo $niveau ?><!--pages/especes/index.php" class="nav__link">Liste des espèces</a>-->
-<!--            </li>-->
-<!---->
-<!--            <li class="nav__list-item">-->
-<!--                <a href="--><?php //echo $niveau ?><!--pages/a-propos/index.php" class="nav__link">À propos</a>-->
-<!--            </li>-->
-<!---->
-<!--            <li class="nav__list-item">-->
-<!--                <a href="--><?php //echo $niveau ?><!--pages/nous-contacter/index.php" class="nav__link">Nous contacter</a>-->
-<!--            </li>-->
-<!---->
-<!--        </ul>-->
-<!---->
-<!--    </nav>-->
-<!--</div>-->
+<nav class="navigation-principale">
+    <ul class="flex nav__list">
+        <li class="nav__item">
+            <a href="<?php echo $niveau ?>index.php" class="nav__link nav__link--active" aria-current="page">
+                <img src="" alt="Logo AppWeb"></a>
+        </li>
+
+        <div class="nav__user flex">
+            <li class="nav__item">
+                <button command="show-modal" commandfor="notification-dialog" class="notification__bouton">
+                    <img src="<?php echo $niveau ?>assets/img/icons/notification.svg" alt="Icon de notification - Ouvrir les notifications">
+                </button>
+
+                <dialog id="notification-dialog" class="nav-dialog">
+                    <div class="nav-dialog__header">
+                        <h2 class="nav-dialog__title">Notifications</h2>
+                        <button command="close" commandfor="notification-dialog" aria-label="Fermer la boîte de dialogue">
+                            Fermer
+                        </button>
+                    </div>
+                    <div class="nav-dialog__content">
+                        <p>Vous n'avez pas de notifications pour le moment.</p>
+                    </div>
+                </dialog>
+            </li>
+
+            <li class="nav__item">
+                <a href="<?php echo $niveau ?>pages/connexion/compte/index.php" class="nav__link">
+                    <img src="<?php echo $niveau ?>assets/img/icons/compte.svg" alt="Icon du compte - Accédez à votre compte"></a>
+            </li>
+        </div>
+    </ul>
+</nav>

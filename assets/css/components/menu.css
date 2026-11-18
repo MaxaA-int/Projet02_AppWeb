@@ -3,5 +3,27 @@
 /* CSS MENU (Navigation) */
 
 @layer components {
+    nav.navigation-principale {
+        background-color: var(--Bleu-mist);
+        padding-block: 2rem;
 
+        ul {
+            padding: 0;
+            margin: 0 auto;
+            max-width: 1000px;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav__user {
+                flex-direction: row;
+                gap: 1rem;
+                align-items: center;
+
+                .notification__bouton {
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+    }
 }

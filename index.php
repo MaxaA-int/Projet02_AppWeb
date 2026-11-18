@@ -4,13 +4,7 @@ $niveau = "";
 
 include($niveau . 'assets/inc/config.inc.php');
 
-$strRequete = 'SELECT * FROM t_couleur';
 
-$pdosResultat = $pdoConnexion->prepare($strRequete);
-$pdosResultat->execute();
-$arrCouleurs = $pdosResultat->fetchAll();
-
-$pdosResultat->closeCursor();
 
 ?>
 
@@ -31,7 +25,9 @@ $pdosResultat->closeCursor();
 
 <body>
 <header>
-
+    <?php
+    include($niveau . "assets/inc/fragments/navigation.php");
+    ?>
 </header>
 <main>
 
