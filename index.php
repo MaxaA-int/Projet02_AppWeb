@@ -39,6 +39,7 @@ $pdosResultat->closeCursor();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <link rel="icon" type="image/x-icon" href="<?php echo $niveau?>assets/img/favicon.svg">
     <title>Accueil - AppWeb</title>
 
     <?php
@@ -62,7 +63,7 @@ $pdosResultat->closeCursor();
         <div class="liste__haut flex">
             <h2>Vos liste :</h2>
             <form action="pages/liste/maj/index.php" method="get">
-                <button class="btn-principal" type="submit">Créer une nouvelle liste</button>
+                <button class="btn-principal" type="submit" name="btn_ajouter" value="ajouter">Créer une nouvelle liste</button>
             </form>
         </div>
 

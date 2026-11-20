@@ -1,0 +1,15 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="56" height="56" rx="10" fill="url(#paint0_radial_48_1593)"/>
+<path d="M10 14.015L14.12 18.135L21.32 9.38501" stroke-width="3.09" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+<path d="M27.32 13.76H44.82" stroke-width="3.09" stroke-miterlimit="2.06" stroke-linecap="round" stroke="white"/>
+<path opacity="0.7" d="M18.24 28.255C18.24 30.5304 16.3954 32.375 14.12 32.375C11.8446 32.375 10 30.5304 10 28.255C10 25.9796 11.8446 24.135 14.12 24.135C16.3954 24.135 18.24 25.9796 18.24 28.255Z" stroke-width="2.32" stroke-miterlimit="2.06" stroke="white"/>
+<path opacity="0.7" d="M24.24 28.255H37.63" stroke-width="3.09" stroke-miterlimit="2.06" stroke-linecap="round" stroke="white"/>
+<path opacity="0.4" d="M18.24 42.495C18.24 44.7704 16.3954 46.615 14.12 46.615C11.8446 46.615 10 44.7704 10 42.495C10 40.2196 11.8446 38.375 14.12 38.375C16.3954 38.375 18.24 40.2196 18.24 42.495Z" stroke-width="2.32" stroke-miterlimit="2.06" stroke="white"/>
+<path opacity="0.4" d="M24.24 42.495H33.51" stroke-width="3.09" stroke-miterlimit="2.06" stroke-linecap="round" stroke="white"/>
+<defs>
+<radialGradient id="paint0_radial_48_1593" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(28 28) rotate(90) scale(28)">
+<stop offset="0.495192" stop-color="#010A34"/>
+<stop offset="1"/>
+</radialGradient>
+</defs>
+</svg>
