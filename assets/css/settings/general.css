@@ -68,6 +68,7 @@
     /* STYLE DE BASE */
     ul {
         list-style-type: none;
+        padding: 0;
     }
 
     /* États des boutons/liens généraux */

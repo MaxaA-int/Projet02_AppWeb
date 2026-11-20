@@ -14,7 +14,7 @@ $strRequete = "SELECT *
 $pdosResultat = $pdoConnexion->prepare($strRequete);
 $pdosResultat->bindValue(':id_utilisateur', $intIdUtilisateur);
 $pdosResultat->execute();
-$arrUtilisateurs = $pdosResultat->fetch(PDO::FETCH_ASSOC);
+$arrUtilisateur = $pdosResultat->fetch(PDO::FETCH_ASSOC);
 $pdosResultat->closeCursor();
 
 /* Requete des listes de l'utilisateur */
@@ -54,10 +54,10 @@ $pdosResultat->closeCursor();
     ?>
 </header>
 
-<main class="main">
+<main class="main" id="main">
     <div class="main__containeur">
 
-        <h1>Bienvenue <?php echo $arrUtilisateurs['prenom']?> !</h1>
+        <h1>Bienvenue <?php echo $arrUtilisateur['prenom'] ?> !</h1>
 
         <div class="liste__haut flex">
             <h2>Vos liste :</h2>
@@ -66,7 +66,44 @@ $pdosResultat->closeCursor();
             </form>
         </div>
 
-        
+        <div class="liste__containeur">
+
+            <ul>
+
+                <?php
+                foreach ($arrListes as $liste) { ?>
+
+                <li class="liste__item">
+                    <div class="item__titre flex">
+                        <p class="gros-texte item__titre"><?php echo $liste['nom_liste'] ?></p>
+                        <button>Deplier</button>
+                    </div>
+                    <div class="item__contenu flex">
+                        <p>0 item</p>
+                        <div class="item__controle flex">
+                            <input type="button">
+                            <input type="button">
+                        </div>
+                    </div>
+                    <ul class="liste__taches">
+                        <li class="taches__item flex">
+                            <div class="nom-tache flex">
+                                <input type="checkbox">
+                                <p>Nom de la tache</p>
+                            </div>
+                            <div class="echeance-tache flex">
+                                <p class="petit-texte">Date d'échéance :</p>
+                                <p>11 Janvier 2027</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <?php } ?>
+
+            </ul>
+
+        </div>
     </div>
 </main>
 
