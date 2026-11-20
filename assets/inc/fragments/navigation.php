@@ -1,8 +1,9 @@
 <nav class="navigation-principale">
+    <a href="#main" class="screen-reader-only focusable">Aller au contenu</a>
     <ul class="flex nav__list">
         <li class="nav__item">
             <a href="<?php echo $niveau ?>index.php" class="nav__link nav__link--active" aria-current="page">
-                <img src="" alt="Logo AppWeb"></a>
+                <img src="<?php echo $niveau?> assets/img/logo_app.svg" alt="Logo AppWeb"></a>
         </li>
 
         <div class="nav__user flex">

@@ -127,29 +127,30 @@
         font-size: 1rem;
 
         /* ACCESSIBILITÉ */
+    }
 
-        .screen-reader-only,
-        .visually-hidden {
-            border: 0;
-            clip: rect(0 0 0 0);
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            width: 1px;
-        }
+    .screen-reader-only,
+    .visually-hidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
 
-        .screen-reader-only.focusable:active,
-        .screen-reader-only.focusable:focus,
-        .visually-hidden.focusable:active,
-        .visually-hidden.focusable:focus {
-            clip: auto;
-            height: auto;
-            margin: 0;
-            overflow: visible;
-            position: static;
-            width: auto;
-        }
+    .screen-reader-only.focusable:active,
+    .screen-reader-only.focusable:focus,
+    .visually-hidden.focusable:active,
+    .visually-hidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
     }
 }
+

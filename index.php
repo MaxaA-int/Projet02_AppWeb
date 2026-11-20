@@ -55,7 +55,8 @@ $pdosResultat->closeCursor();
 </header>
 
 <main class="main">
-    <main class="main__containeur">
+    <div class="main__containeur">
+
         <h1>Bienvenue <?php echo $arrUtilisateurs['prenom']?> !</h1>
 
         <div class="liste__haut flex">
@@ -64,7 +65,9 @@ $pdosResultat->closeCursor();
                 <button class="btn-principal" type="submit">Créer une nouvelle liste</button>
             </form>
         </div>
-    </main>
+
+        
+    </div>
 </main>
 
 <footer class="footer">
