@@ -18,10 +18,12 @@ $arrUtilisateur = $pdosResultat->fetch(PDO::FETCH_ASSOC);
 $pdosResultat->closeCursor();
 
 /* Requete des listes de l'utilisateur */
-$strRequete = "SELECT t_liste.*, t_couleur.nom_couleur_fr
+$strRequete = "SELECT t_liste.*, t_couleur.nom_couleur_fr, COUNT(t_item.id_item) AS nb_items
                 FROM t_liste
                 INNER JOIN t_couleur ON t_liste.id_couleur = t_couleur.id_couleur
-                WHERE id_utilisateur = :id_utilisateur";
+                LEFT JOIN t_item ON t_liste.id_liste = t_item.id_liste
+                WHERE id_utilisateur = :id_utilisateur
+                GROUP BY t_liste.id_liste, t_couleur.nom_couleur_fr";
 
 $pdosResultat = $pdoConnexion->prepare($strRequete);
 $pdosResultat->bindValue(':id_utilisateur', $intIdUtilisateur);
@@ -39,7 +41,7 @@ $pdosResultat->closeCursor();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <link rel="icon" type="image/x-icon" href="<?php echo $niveau?>assets/img/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="<?php echo $niveau ?>assets/img/favicon.svg">
     <title>Accueil - AppWeb</title>
 
     <?php
@@ -63,42 +65,29 @@ $pdosResultat->closeCursor();
         <div class="liste__haut flex">
             <h2>Vos liste :</h2>
             <form action="pages/liste/maj/index.php" method="get">
-                <button class="btn-principal" type="submit" name="btn_ajouter" value="ajouter">Créer une nouvelle liste</button>
+                <button class="btn-principal" type="submit" name="btn_ajouter" value="ajouter">Créer une nouvelle
+                    liste
+                </button>
             </form>
         </div>
 
         <div class="liste__containeur">
 
-            <ul>
+            <ul class="flex">
 
                 <?php
                 foreach ($arrListes as $liste) { ?>
 
-                <li class="liste__item">
-                    <div class="item__titre flex">
+                    <li class="liste__item">
                         <p class="gros-texte item__titre"><?php echo $liste['nom_liste'] ?></p>
-                        <button>Deplier</button>
-                    </div>
-                    <div class="item__contenu flex">
-                        <p>0 item</p>
-                        <div class="item__controle flex">
-                            <input type="button">
-                            <input type="button">
+                        <div class="item__contenu flex">
+                            <p><?php echo $liste['nb_items']?> items</p>
+                            <div class="item__controle flex">
+                                <input type="button">
+                                <input type="button">
+                            </div>
                         </div>
-                    </div>
-                    <ul class="liste__taches">
-                        <li class="taches__item flex">
-                            <div class="nom-tache flex">
-                                <input type="checkbox">
-                                <p>Nom de la tache</p>
-                            </div>
-                            <div class="echeance-tache flex">
-                                <p class="petit-texte">Date d'échéance :</p>
-                                <p>11 Janvier 2027</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                    </li>
 
                 <?php } ?>
 

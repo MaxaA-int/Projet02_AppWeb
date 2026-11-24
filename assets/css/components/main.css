@@ -27,24 +27,24 @@
 
                 ul {
                     width: 100%;
+                    gap: 1.5rem;
+                    flex-direction: column;
 
                     .liste__item {
                         width: 100%;
-                        margin-bottom: 1rem;
                         border-left: 1rem solid var(--Orange);
                         border-radius: 1rem;
+                        margin: 0;
 
                         .item__titre {
                             background-color: var(--Bleu-deep);
                             color: var(--Orange-coral);
-                            padding: 0.5rem 1rem;
+                            padding: 1rem;
                             justify-content: space-between;
                             flex-direction: row;
                             align-items: center;
-
-                            p {
-                                margin: 0;
-                            }
+                            border-top-right-radius: 1rem;
+                            margin: 0;
 
                             button {
                                 padding: 0;
@@ -60,7 +60,7 @@
                             justify-content: space-between;
                             align-items: center;
                             flex-direction: row;
-                            border-bottom: 2px solid var(--Bleu-charbon);
+                            border-bottom-right-radius: 1rem;
 
                             p {
                                 margin: 0;
@@ -69,32 +69,6 @@
                             .item__controle {
                                 flex-direction: row;
                                 gap: 0.5rem;
-                            }
-                        }
-
-                        .liste__taches {
-                            background-color: var(--Bleu-mist);
-
-                            .taches__item {
-                                padding: 0.5rem 1rem;
-                                justify-content: space-between;
-                                align-items: center;
-                                flex-direction: row;
-
-                                .nom-tache {
-                                    flex-direction: row;
-                                    gap: 0.5rem;
-                                    align-items: center;
-                                }
-
-                                .echeance-tache {
-                                    flex-direction: column;
-
-                                    p {
-                                        margin: 0;
-                                    }
-
-                                }
                             }
                         }
                     }
