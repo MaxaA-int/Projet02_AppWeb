@@ -1,71 +1,35 @@
-<!--<div class="pied-de-page">-->
-<!--    <div class="ctn__pied-de-page">-->
-<!--        <h4>Projet Biodiversité Québec</h4>-->
-<!---->
-<!--        <ul class="pied-de-page__liste flex">-->
-<!--            <li class="pied-de-page__item">-->
-<!--                <h6>Navigation Principale</h6>-->
-<!--                <nav aria-label="Navigation du pied de page" class="pied-de-page__navigation">-->
-<!--                    <ul class="nav__list flex" id="">-->
-<!--                        <li class="nav__list-item">-->
-<!--                            <a href="--><?php //echo $niveau ?><!--index.php" class="nav__link nav__link--active"-->
-<!--                               aria-current="page">Accueil</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__list-item">-->
-<!--                            <a href="--><?php //echo $niveau ?><!--pages/especes/index.php" class="nav__link">Liste des-->
-<!--                                espèces</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__list-item">-->
-<!--                            <a href="--><?php //echo $niveau ?><!--pages/a-propos/index.php" class="nav__link">À propos</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav__list-item">-->
-<!--                            <a href="--><?php //echo $niveau ?><!--pages/nous-contacter/index.php" class="nav__link">Nous-->
-<!--                                contacter</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </nav>-->
-<!--            </li>-->
-<!---->
-<!--            <li class="pied-de-page__item">-->
-<!--                <h6>Suivez-nous</h6>-->
-<!--                <nav aria-label="Navigation du pied de page" class="pied-de-page__navigation">-->
-<!--                    <ul class="flex">-->
-<!--                        <li>-->
-<!--                            <qc-external-link class="flex">-->
-<!--                                <a href="#" class="not-visited">Facebook</a>-->
-<!--                            </qc-external-link>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <qc-external-link class="flex">-->
-<!--                                <a href="#" class="not-visited">X (Twitter)</a>-->
-<!--                            </qc-external-link>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <qc-external-link class="flex">-->
-<!--                                <a href="#" class="not-visited">Youtube</a>-->
-<!--                            </qc-external-link>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <qc-external-link class="flex">-->
-<!--                                <a href="#" class="not-visited">Instagram</a>-->
-<!--                            </qc-external-link>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </nav>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!---->
-<!--</div>-->
-<!--<qc-piv-footer>-->
-<!--    <nav aria-label="Navigation du pied de page">-->
-<!--        <ul>-->
-<!--            <li><a href="#">Accessibilité</a></li>-->
-<!--            <li><a href="#">Plan du site</a></li>-->
-<!--            <li><a href="#">Accès à l’information</a></li>-->
-<!--            <li><a href="#">Politique de confidentialité</a></li>-->
-<!--            <li><a href="#">Conditions d’utilisation</a></li>-->
-<!--            <li><a href="#">À propos de Québec.ca</a></li>-->
-<!--        </ul>-->
-<!--    </nav>-->
-<!--</qc-piv-footer>-->
+<div class="footer__containeur">
+    <a href="<?php echo $niveau ?>index.php" class="">
+        <img src="<?php $niveau ?>assets/img/logo_app.svg" alt="Logo de LISTO - Direction vers l'accueil">
+    </a>
+
+    <ul class="nav-liste__footer">
+        <li class="footer__item">
+            <h3 class="">Les autres pages</h3>
+        </li>
+        <li class="footer__item">
+            <a href="<?php echo $niveau ?>pages/connexion/compte/index.php">Mon Compte</a>
+        </li>
+        <li class="footer__item">
+            <a href="#">Mes Notifications</a>
+        </li>
+        <li class="footer__item">
+            <a href="#">À propos</a>
+        </li>
+        <li class="footer__item">
+            <a href="#">Nous Contacter</a>
+        </li>
+    </ul>
+
+    <ul class="liste__reseaux-sociaux">
+        <li class="reseau-sociaux__item">
+            <a href="https://www.facebook.com/" target="_blank" class="external-link">Facebook</a>
+        </li>
+        <li class="reseau-sociaux__item">
+            <a href="https://www.instagram.com/" target="_blank" class="external-link">Instagram</a>
+        </li>
+        <li class="reseau-sociaux__item">
+            <a href="https://www.x.com/" target="_blank" class="external-link">X (Twitter)</a>
+        </li>
+    </ul>
+</div>
