@@ -1,41 +1,121 @@
 /* VARIABLES */
 
 :root {
-  /* Couleurs */
+    /* Couleurs */
 
-  /* Couleurs Principales */
-  --Bleu-deep: #17222E;
-  --Bleu-steel: #4F6B80;
-  --Bleu-mist: #A9B8C2;
-  --Orange: #C4482F;
-  --Orange-coral: #E58A78;
-  --Bleu-charbon: #23282D;
+    /* Couleurs Principales */
+    --Bleu-deep: #17222E;
+    --Bleu-steel: #4F6B80;
+    --Bleu-mist: #A9B8C2;
+    --Orange: #C4482F;
+    --Orange-coral: #E58A78;
+    --Bleu-charbon: #23282D;
 
-  /* Couleurs Basiques */
-  --Blanc: #fff;
-  --Noir: #121111;
-  --Error: #DE1414;
-  --Warning: #FFC107;
+    /* Couleurs Basiques */
+    --Blanc: #fff;
+    --Noir: #121111;
+    --Error: #DE1414;
+    --Warning: #FFC107;
 
-  /* Choix des couleurs des listes */
-  --liste-tofu: #FAF8EF;
-  --liste-ecureuil: #8F8176;
-  --liste-topaze: #7C778A;
-  --liste-salem: #0B8436;
-  --liste-wasabi: #788A25;
-  --liste-trefle: #36D965;
-  --liste-tournesol: #E2BD28;
-  --liste-tango: #ED7A1C;
-  --liste-vermillon: #FF4D00;
-  --liste-ecarlate: #F5200A;
-  --liste-vieille-brique: #941E1E;
-  --liste-disco: #871550;
-  --liste-helitrope: #DF73FF;
-  --liste-lavande: #B57EDC;
-  --liste-violet: #660099;
-  --liste-indigo-perse: #2A1587;
-  --liste-denim: #1550D5;
-  --liste-turquoise: #36D5D9;
-  --liste-muesli: #AA8B5B;
-  --liste-cannelle-intense: #E3671C;
+    /* Choix des couleurs des listes */
+    --tofu: #FAF8EF;
+    --ecureuil: #8F8176;
+    --topaze: #7C778A;
+    --salem: #0B8436;
+    --wasabi: #788A25;
+    --trefle: #36D965;
+    --tournesol: #E2BD28;
+    --tango: #ED7A1C;
+    --vermillon: #FF4D00;
+    --ecarlate: #F5200A;
+    --vieille-brique: #941E1E;
+    --disco: #871550;
+    --heliotrope: #DF73FF;
+    --lavande: #B57EDC;
+    --violet: #660099;
+    --indigo-perse: #2A1587;
+    --denim: #1550D5;
+    --turquoise: #36D5D9;
+    --muesli: #AA8B5B;
+    --cannelle-intense: #E3671C;
+}
+
+.liste-tofu {
+    border-left: 1rem solid var(--tofu);
+}
+
+.liste-ecureuil {
+    border-left: 1rem solid var(--ecureuil);
+}
+
+.liste-topaze {
+    border-left: 1rem solid var(--topaze);
+}
+
+.liste-salem {
+    border-left: 1rem solid var(--salem);
+}
+
+.liste-wasabi {
+    border-left: 1rem solid var(--wasabi);
+}
+
+.liste-trefle {
+    border-left: 1rem solid var(--trefle);
+}
+
+.liste-tournesol {
+    border-left: 1rem solid var(--tournesol);
+}
+
+.liste-tango {
+    border-left: 1rem solid var(--tango);
+}
+
+.liste-vermillon {
+    border-left: 1rem solid var(--vermillon);
+}
+
+.liste-ecarlate {
+    border-left: 1rem solid var(--ecarlate);
+}
+
+.liste-vieille-brique {
+    border-left: 1rem solid var(--vieille-brique);
+}
+
+.liste-disco {
+    border-left: 1rem solid var(--disco);
+}
+
+.liste-heliotrope {
+    border-left: 1rem solid var(--heliotrope);
+}
+
+.liste-lavande {
+    border-left: 1rem solid var(--lavande);
+}
+
+.liste-violet {
+    border-left: 1rem solid var(--violet);
+}
+
+.liste-indigo-perse {
+    border-left: 1rem solid var(--indigo-perse);
+}
+
+.liste-denim {
+    border-left: 1rem solid var(--denim);
+}
+
+.liste-turquoise {
+    border-left: 1rem solid var(--turquoise);
+}
+
+.liste-muesli {
+    border-left: 1rem solid var(--muesli);
+}
+
+.liste-cannelle-intense {
+    border-left: 1rem solid var(--cannelle-intense);
 }

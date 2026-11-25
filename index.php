@@ -31,6 +31,16 @@ $pdosResultat->execute();
 $arrListes = $pdosResultat->fetchAll(PDO::FETCH_ASSOC);
 $pdosResultat->closeCursor();
 
+/**
+ * @param $p_couleur
+ * @return false|string
+ */
+function simplifierTexte ($p_couleur) {
+    $resultat = mb_strtolower($p_couleur, 'UTF-8');
+    $transliterator = Transliterator::create('Any-latin; Latin-ASCII');
+
+    return $transliterator->transliterate($resultat);
+}
 
 ?>
 
@@ -78,7 +88,7 @@ $pdosResultat->closeCursor();
                 <?php
                 foreach ($arrListes as $liste) { ?>
 
-                    <li class="liste__item">
+                    <li class="liste__item liste-<?php echo simplifiertexte($liste['nom_couleur_fr']) ?>">
                         <p class="gros-texte item__titre"><?php echo $liste['nom_liste'] ?></p>
                         <div class="item__contenu flex">
                             <p><?php echo $liste['nb_items']?> items</p>
