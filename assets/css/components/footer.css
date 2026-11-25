@@ -3,5 +3,64 @@
 /* CSS FOOTER */
 
 @layer components {
+    .footer {
+        width: 100%;
+        padding-block: 2rem;
 
+        .footer__containeur {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+            border-top: 0.5rem solid var(--Bleu-deep);
+
+            .logo__footer {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    max-width: 350px;
+                }
+            }
+
+            .footer__navigation {
+                flex-direction: column;
+                border-top: 1px solid var(--Bleu-deep);
+                border-bottom: 1px solid var(--Bleu-deep);
+                margin-block: 2rem;
+
+                h3 {
+                    margin: 0;
+                }
+
+
+                .nav-liste__footer {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+
+                .liste__reseaux-sociaux {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+
+
+            .pragraphes__copyright {
+                flex-direction: column;
+                gap: 0.2rem;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            @media screen and (min-width: 67.5rem) {
+                .footer__navigation {
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+        }
+    }
 }

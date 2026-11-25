@@ -69,6 +69,34 @@
                             .item__controle {
                                 flex-direction: row;
                                 gap: 0.5rem;
+                                position: relative;
+
+                                input {
+                                    display: inline-block;
+                                    width: 45px;
+                                    height: 45px;
+                                    padding: 1rem;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 75%;
+
+                                }
+
+                                input[name="btn_modifier"] {
+                                    background-image: url("../../img/icons/edit.svg");
+                                    background-color: var(--Bleu-charbon);
+                                    border: none;
+                                    border-radius: 0.5rem;
+                                    cursor: pointer;
+                                }
+
+                                input[name="btn_delete"] {
+                                    background-image: url("../../img/icons/delete.svg");
+                                    background-color: var(--Rouge);
+                                    border: none;
+                                    border-radius: 0.5rem;
+                                    cursor: pointer;
+                                }
                             }
                         }
                     }

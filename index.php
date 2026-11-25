@@ -83,8 +83,8 @@ $pdosResultat->closeCursor();
                         <div class="item__contenu flex">
                             <p><?php echo $liste['nb_items']?> items</p>
                             <div class="item__controle flex">
-                                <input type="button">
-                                <input type="button">
+                                <input type="button" name="btn_modifier">
+                                <input type="button" name="btn_delete">
                             </div>
                         </div>
                     </li>
