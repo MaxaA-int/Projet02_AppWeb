@@ -8,13 +8,15 @@
         .main__containeur {
             max-width: 1000px;
             margin: 0 auto;
-            padding-inline: 1rem;
+            padding: 1rem;
 
             h1 {
                 text-align: center;
                 padding-block: 3rem;
                 margin: 0;
             }
+
+            /* PAGE ACCUEIL */
 
             .liste__haut {
                 justify-content: space-between;
@@ -99,9 +101,88 @@
                             }
                         }
                     }
+
+                }
+            }
+
+            /* PAGE MAJ DES LISTES */
+
+            .form-maj-liste {
+
+                .form__containeur {
+                    gap: 2rem;
+                    flex-direction: column;
+
+                    .form__item {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        label {
+                            font-weight: bold;
+                            font-size: 1.2rem;
+                        }
+
+                        input[name="nom_liste"] {
+                            padding: 1rem;
+                            font-size: 1rem;
+                            border-radius: 0.5rem;
+                            border: 1px solid var(--Bleu-deep);
+                        }
+
+                        li {
+                            position: relative;
+                        }
+
+                        .fond-radio {
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 0.5rem;
+                        }
+
+
+                        input[type='radio'] {
+                            position: absolute;
+                            display: inline-block;
+                            top: 10px;
+                            left: 10px;
+                            width: 25px;
+                            height: 25px;
+                            background-color: var(--Bleu-deep);
+                            color: var(--Orange-coral);
+                        }
+
+                        /*input[type='radio']:after {*/
+                        /*    width: 25px;*/
+                        /*    height: 25px;*/
+                        /*    border-radius: 1rem;*/
+                        /*    !*top: -2px;*!*/
+                        /*    !*left: -1px;*!*/
+                        /*    position: relative;*/
+                        /*    background-color: #d1d3d1;*/
+                        /*    content: '';*/
+                        /*    display: inline-block;*/
+                        /*    visibility: visible;*/
+                        /*    border: 2px solid white;*/
+                        /*}*/
+
+                        /*input[type='radio']:checked:after {*/
+                        /*    width: 25px;*/
+                        /*    height: 25px;*/
+                        /*    border-radius: 1rem;*/
+                        /*    !*top: -2px;*!*/
+                        /*    !*left: -1px;*!*/
+                        /*    position: relative;*/
+                        /*    border: 2px solid var(--Bleu-deep);*/
+                        /*    content: '';*/
+                        /*    display: inline-block;*/
+                        /*    visibility: visible;*/
+                        /*    !*border: 2px solid white;*!*/
+                        /*}*/
+
+                    }
                 }
             }
         }
-
     }
 }

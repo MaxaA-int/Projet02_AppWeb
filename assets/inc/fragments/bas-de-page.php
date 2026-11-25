@@ -1,6 +1,6 @@
 <div class="footer__containeur">
     <a href="<?php echo $niveau ?>index.php" class="logo__footer">
-        <img src="<?php $niveau ?>assets/img/logo_app.svg" alt="Logo de LISTO - Direction vers l'accueil">
+        <img src="<?php echo $niveau ?>assets/img/logo_app.svg" alt="Logo de LISTO - Direction vers l'accueil">
     </a>
 
     <div class="footer__navigation flex">

@@ -35,7 +35,8 @@ $pdosResultat->closeCursor();
  * @param $p_couleur
  * @return false|string
  */
-function simplifierTexte ($p_couleur) {
+function simplifierTexte($p_couleur)
+{
     $resultat = mb_strtolower($p_couleur, 'UTF-8');
     $transliterator = Transliterator::create('Any-latin; Latin-ASCII');
 
@@ -91,10 +92,14 @@ function simplifierTexte ($p_couleur) {
                     <li class="liste__item liste-<?php echo simplifiertexte($liste['nom_couleur_fr']) ?>">
                         <p class="gros-texte item__titre"><?php echo $liste['nom_liste'] ?></p>
                         <div class="item__contenu flex">
-                            <p><?php echo $liste['nb_items']?> items</p>
+                            <p><?php echo $liste['nb_items'] ?> items</p>
                             <div class="item__controle flex">
-                                <input type="button" name="btn_modifier">
-                                <input type="button" name="btn_delete">
+                                <form action="pages/liste/maj/index.php" method="get">
+                                    <input type="hidden" name="idListe" value="<?php echo $liste['id_liste'] ?>">
+                                    <input type="submit" name="btn_modifier" value="">
+                                </form>
+
+                                <input type="button" name="btn_delete" value="">
                             </div>
                         </div>
                     </li>
@@ -108,6 +113,6 @@ function simplifierTexte ($p_couleur) {
 </main>
 
 <footer class="footer">
-<?php include($niveau . "assets/inc/fragments/bas-de-page.php") ?>
+    <?php include($niveau . "assets/inc/fragments/bas-de-page.php") ?>
 </footer>
 </body>
