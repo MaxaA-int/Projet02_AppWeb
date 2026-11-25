@@ -16,4 +16,26 @@
   --Noir: #121111;
   --Error: #DE1414;
   --Warning: #FFC107;
+
+  /* Choix des couleurs des listes */
+  --liste-tofu: #FAF8EF;
+  --liste-ecureuil: #8F8176;
+  --liste-topaze: #7C778A;
+  --liste-salem: #0B8436;
+  --liste-wasabi: #788A25;
+  --liste-trefle: #36D965;
+  --liste-tournesol: #E2BD28;
+  --liste-tango: #ED7A1C;
+  --liste-vermillon: #FF4D00;
+  --liste-ecarlate: #F5200A;
+  --liste-vieille-brique: #941E1E;
+  --liste-disco: #871550;
+  --liste-helitrope: #DF73FF;
+  --liste-lavande: #B57EDC;
+  --liste-violet: #660099;
+  --liste-indigo-perse: #2A1587;
+  --liste-denim: #1550D5;
+  --liste-turquoise: #36D5D9;
+  --liste-muesli: #AA8B5B;
+  --liste-cannelle-intense: #E3671C;
 }
