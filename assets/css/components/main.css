@@ -84,7 +84,7 @@
 
                                 input[name="btn_modifier"] {
                                     background-image: url("../../img/icons/edit.svg");
-                                    background-color: var(--Bleu-charbon);
+                                    background-color: var(--Warning);
                                     border: none;
                                     border-radius: 0.5rem;
                                     cursor: pointer;
@@ -92,7 +92,7 @@
 
                                 input[name="btn_delete"] {
                                     background-image: url("../../img/icons/delete.svg");
-                                    background-color: var(--Rouge);
+                                    background-color: var(--Error);
                                     border: none;
                                     border-radius: 0.5rem;
                                     cursor: pointer;

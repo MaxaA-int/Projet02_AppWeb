@@ -14,5 +14,6 @@
   /* Couleurs Basiques */
   --Blanc: #fff;
   --Noir: #121111;
-  --Error: #DE1414DE1414;
+  --Error: #DE1414;
+  --Warning: #FFC107;
 }
