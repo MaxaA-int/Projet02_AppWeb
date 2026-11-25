@@ -54,8 +54,6 @@ function simplifierTexte($p_couleur)
 }
 
 ?>
-?>
-
 
 <!doctype html>
 <html lang="fr">
