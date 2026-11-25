@@ -130,56 +130,41 @@
                             border: 1px solid var(--Bleu-deep);
                         }
 
-                        li {
-                            position: relative;
-                        }
-
-                        .fond-radio {
-                            width: 45px;
-                            height: 45px;
-                            border-radius: 0.5rem;
-                        }
-
-
-                        input[type='radio'] {
-                            position: absolute;
-                            display: inline-block;
-                            top: 10px;
-                            left: 10px;
-                            width: 25px;
-                            height: 25px;
+                        .liste__couleurs {
+                            gap: 0.5rem;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            max-width: 550px;
+                            width: 100%;
                             background-color: var(--Bleu-deep);
-                            color: var(--Orange-coral);
+                            padding: 1rem;
+                            border-radius: 1rem;
+
+                            .couleur__item {
+                                position: relative;
+
+                                .fond-radio {
+                                    width: 45px;
+                                    height: 45px;
+                                    border-radius: 0.5rem;
+
+                                    input[type='radio'] {
+                                        position: absolute;
+                                        display: inline-block;
+                                        top: 10px;
+                                        left: 10px;
+                                        width: 25px;
+                                        height: 25px;
+
+                                        :checked {
+                                            background-color: var(--Bleu-deep);
+                                            color: var(--Orange-coral);
+                                        }
+                                    }
+                                }
+                            }
                         }
-
-                        /*input[type='radio']:after {*/
-                        /*    width: 25px;*/
-                        /*    height: 25px;*/
-                        /*    border-radius: 1rem;*/
-                        /*    !*top: -2px;*!*/
-                        /*    !*left: -1px;*!*/
-                        /*    position: relative;*/
-                        /*    background-color: #d1d3d1;*/
-                        /*    content: '';*/
-                        /*    display: inline-block;*/
-                        /*    visibility: visible;*/
-                        /*    border: 2px solid white;*/
-                        /*}*/
-
-                        /*input[type='radio']:checked:after {*/
-                        /*    width: 25px;*/
-                        /*    height: 25px;*/
-                        /*    border-radius: 1rem;*/
-                        /*    !*top: -2px;*!*/
-                        /*    !*left: -1px;*!*/
-                        /*    position: relative;*/
-                        /*    border: 2px solid var(--Bleu-deep);*/
-                        /*    content: '';*/
-                        /*    display: inline-block;*/
-                        /*    visibility: visible;*/
-                        /*    !*border: 2px solid white;*!*/
-                        /*}*/
-
                     }
                 }
             }

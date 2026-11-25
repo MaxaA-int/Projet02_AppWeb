@@ -97,11 +97,13 @@ function simplifierTexte($p_couleur)
                 <li class="form__item">
                     <label for="couleur_liste">Couleur de la liste :</label>
 
-                    <ul>
+                    <ul class="liste__couleurs flex">
                         <?php foreach ($arrListeCouleurs as $couleur) { ?>
-                            <li>
+                            <li class="couleur__item">
                                 <div class="fond-radio liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>">
                                     <input type="radio"
+                                           aria-label="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
+                                           title="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
                                            class="liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>"
                                            name="idCouleur" value="<?php echo $couleur['id_couleur'] ?>"
                                            id="couleur_<?php echo $couleur['id_couleur'] ?>">
