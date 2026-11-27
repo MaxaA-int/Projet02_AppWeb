@@ -93,19 +93,20 @@ function simplifierTexte($p_couleur)
                     <input type="text" name="nom_liste" id="nom_liste" value="">
                 </li>
                 <li class="form__item">
-                    <label for="couleur_liste">Couleur de la liste :</label>
+                    <p class="couleur-liste__label">Couleur de la liste :</p>
 
                     <ul class="liste__couleurs flex">
                         <?php foreach ($arrListeCouleurs as $couleur) { ?>
                             <li class="couleur__item">
-                                <div class="fond-radio liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>">
-                                    <input type="radio"
-                                           aria-label="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
-                                           title="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
-                                           class="liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>"
-                                           name="idCouleur" value="<?php echo $couleur['id_couleur'] ?>"
-                                           id="couleur_<?php echo $couleur['id_couleur'] ?>">
-                                </div>
+                                <label for="couleur_<?php echo $couleur['id_couleur'] ?>"
+                                       class="fond-radio liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>">
+                                </label>
+                                <input type="radio"
+                                       aria-label="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
+                                       title="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
+                                       class="visually-hidden liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>"
+                                       name="idCouleur" value="<?php echo $couleur['id_couleur'] ?>"
+                                       id="couleur_<?php echo $couleur['id_couleur'] ?>">
                             </li>
                         <?php } ?>
                     </ul>
