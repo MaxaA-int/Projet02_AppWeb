@@ -27,14 +27,14 @@
             <li class="reseau-sociaux__item">
                 <h3 class="">Suivez-nous !</h3>
             </li>
-            <li class="reseau-sociaux__item">
-                <a href="https://www.facebook.com/" target="_blank" class="external-link">Facebook</a>
+            <li class="reseau-sociaux__item flex">
+                <a href="https://www.facebook.com/" target="_blank" class="external-link flex reseau-sociaux__link">Facebook</a>
             </li>
-            <li class="reseau-sociaux__item">
-                <a href="https://www.instagram.com/" target="_blank" class="external-link">Instagram</a>
+            <li class="reseau-sociaux__item flex">
+                <a href="https://www.instagram.com/" target="_blank" class="external-link flex reseau-sociaux__link">Instagram</a>
             </li>
-            <li class="reseau-sociaux__item">
-                <a href="https://www.x.com/" target="_blank" class="external-link">X (Twitter)</a>
+            <li class="reseau-sociaux__item flex">
+                <a href="https://www.x.com/" target="_blank" class="external-link flex reseau-sociaux__link">X (Twitter)</a>
             </li>
         </ul>
 
