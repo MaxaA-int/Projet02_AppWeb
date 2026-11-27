@@ -74,7 +74,8 @@
     }
 
     /* États des boutons/liens généraux */
-    button.btn-principal {
+    button.btn-principal,
+    input.btn-principal{
         background-color: var(--Orange-coral);
         color: var(--Noir);
         border: none;
@@ -86,17 +87,21 @@
     }
 
 
-    button.btn-secondaire {
+    button.btn-secondaire,
+    input.btn-secondaire {
         background-color: var(--Bleu-charbon);
         color: var(--Blanc);
         padding: 1rem 1.5rem;
         border-radius: 0.5rem;
+        border: none;
         font-size: 1rem;
         cursor: pointer;
     }
 
     button.btn-principal:hover,
-    button.btn-secondaire:hover {
+    input.btn-principal:hover,
+    button.btn-secondaire:hover,
+    input.btn-secondaire:hover {
         background-color: var(--Bleu-steel);
         color: var(--Blanc);
         border: 1px solid var(--Bleu-deep);

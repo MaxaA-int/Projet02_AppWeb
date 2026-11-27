@@ -5,6 +5,7 @@ $strCodeOperation = "";
 $strCodeErreur = "00000";
 $strMessageErreur = "";
 $strEnteteH1 = "";
+$strTexteBoutonValider = "";
 
 include($niveau . 'assets/inc/config.inc.php');
 
@@ -14,7 +15,6 @@ $intIdListe = isset($_GET['idListe']) ? (int)$_GET['idListe'] : 0;
 switch (true) {
     case isset($_GET['btn_modifier']);
         $strCodeOperation = "modifier";
-        $strEnteteH1 = "Modification d'une liste";
         break;
     case isset($_GET['btn_nouveau']);
         $strCodeOperation = "nouveau";
@@ -22,7 +22,6 @@ switch (true) {
         break;
     case isset($_GET['btn_ajouter']);
         $strCodeOperation = "ajouter";
-        $strEnteteH1 = "Création d'une nouvelle liste";
         break;
     case isset($_GET['btn_supprimer']);
         $strCodeOperation = "supprimer";
@@ -34,13 +33,19 @@ switch (true) {
 }
 
 $arrListe = array();
-$arrListe['id_liste'] = $intIdListe;
-$arrListe['nom_liste'] = "";
-$arrListe['id_couleur'] = 0;
-$arrListe['id_utilisateur'] = $intIdUtilisateur;
-$arrListe['nom_couleur_fr'] = "";
 
-if ($strCodeOperation === "modifier") {
+/* SI NOUVELLE LISTE - BOUTON CRÉER UNE NOUVELLE LISTE */
+if ($strCodeOperation === "ajouter") {
+    $arrListe['id_liste'] = $intIdListe;
+    $arrListe['nom_liste'] = "";
+    $arrListe['id_couleur'] = 0;
+    $arrListe['id_utilisateur'] = $intIdUtilisateur;
+    $strEnteteH1 = "Création d'une nouvelle liste";
+    $strTexteBoutonValider = "Créer la liste";
+}
+
+/* MODIFICATION D'UNE LISTE - BOUTON ÉDITER */
+if ($strCodeOperation === "afficher") {
     /* Requête pour obtenir les info de la liste */
     $strRequete = "SELECT *
                 FROM t_liste 
@@ -51,6 +56,16 @@ if ($strCodeOperation === "modifier") {
     $pdosResultat->execute();
     $arrListe = $pdosResultat->fetch(PDO::FETCH_ASSOC);
     $pdosResultat->closecursor();
+    $strEnteteH1 = "Modification de la liste $arrListe[nom_liste]";
+    $strTexteBoutonValider = "Enregistrer les modifications";
+}
+
+/* CONDITIONS ET REQUETES POUR VALIDER ET METTRE À JOUR */
+if ($strCodeOperation === "modifier" || $strCodeOperation === "ajouter" || $strCodeOperation === "supprimer") {
+    $arrListe['id_liste'] = $_GET['idListe'];
+    $arrListe['nom_liste'] = $_GET['nom_liste'];
+    $arrListe['id_couleur'] = $_GET['idCouleur'];
+    $arrListe['id_utilisateur'] = $_GET['idUtilisateur'];
 }
 
 /* Requête pour les couleurs */
@@ -126,7 +141,9 @@ function ecrireChecked($valeurRadio, $nomRadio)
 
         <h1><?php echo $strEnteteH1 ?></h1>
 
-        <form action="<?php echo $niveau ?>index.php" method="get" class="form-maj-liste">
+        <form action="index.php" method="get" class="form-maj-liste">
+            <input type="hidden" name="idUtilisateur" value="<?php echo $intIdUtilisateur ?>">
+            <input type="hidden" name="idListe" value="<?php echo $intIdListe ?>">
 
             <ul class="form__containeur flex">
                 <li class="form__item">
@@ -139,9 +156,6 @@ function ecrireChecked($valeurRadio, $nomRadio)
                     <ul class="liste__couleurs flex">
                         <?php foreach ($arrListeCouleurs as $couleur) { ?>
                             <li class="couleur__item">
-                                <label for="couleur_<?php echo $couleur['id_couleur'] ?>"
-                                       class="fond-radio liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>">
-                                </label>
                                 <input type="radio"
                                         <?php echo ecrireChecked("$couleur[id_couleur]", "id_couleur") ?>
                                        aria-label="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
@@ -149,9 +163,18 @@ function ecrireChecked($valeurRadio, $nomRadio)
                                        class="visually-hidden liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>"
                                        name="idCouleur" value="<?php echo $couleur['id_couleur'] ?>"
                                        id="couleur_<?php echo $couleur['id_couleur'] ?>">
+                                <label for="couleur_<?php echo $couleur['id_couleur'] ?>"
+                                       class="fond-radio liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>">
+                                </label>
                             </li>
                         <?php } ?>
                     </ul>
+                </li>
+
+                <li class="form__item form__item--controle flex">
+                    <input type="submit" class="btn-secondaire" name="btn_annuler" value="Annuler">
+                    <input type="submit" class="btn-principal" name="btn_modifier"
+                           value="<?php echo $strTexteBoutonValider ?>">
                 </li>
             </ul>
 

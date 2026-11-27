@@ -83,7 +83,7 @@
 
                                 }
 
-                                input[name="btn_modifier"] {
+                                input[name="btn_afficher"] {
                                     background-image: url("../../img/icons/edit.svg");
                                     background-color: var(--Warning);
                                     border: none;
@@ -110,7 +110,7 @@
             .form-maj-liste {
 
                 .form__containeur {
-                    gap: 2rem;
+                    gap: 4rem;
                     flex-direction: column;
 
                     .form__item {
@@ -132,7 +132,7 @@
                         }
 
                         .liste__couleurs {
-                            gap: 0.5rem;
+                            gap: 1rem;
                             flex-direction: row;
                             flex-wrap: wrap;
                             justify-content: center;
@@ -161,9 +161,40 @@
 
                                 input[type='radio']:checked + label {
                                     outline: 2px solid var(--Orange-coral);
-                                    outline-offset: 2px;
+                                    outline-offset: 4px;
                                 }
                             }
+                        }
+
+                    }
+
+                    .form__item--controle {
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Affichage Grosse Tablette - 768px */
+    @media screen and (min-width: 48.875rem) {
+        .main {
+
+            .main__containeur {
+
+                .form-maj-liste {
+
+                    .form__containeur {
+
+                        .form__item {
+
+                        }
+
+                        .form__item--controle {
+                            flex-direction: row;
+                            justify-content: flex-end;
                         }
                     }
                 }

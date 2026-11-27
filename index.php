@@ -96,7 +96,7 @@ function simplifierTexte($p_couleur)
                             <div class="item__controle flex">
                                 <form action="pages/liste/maj/index.php" method="get">
                                     <input type="hidden" name="idListe" value="<?php echo $liste['id_liste'] ?>">
-                                    <input type="submit" name="btn_modifier" value="">
+                                    <input type="submit" name="btn_afficher" value="">
                                 </form>
 
                                 <input type="button" name="btn_delete" value="">
