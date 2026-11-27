@@ -33,6 +33,26 @@ switch (true) {
         $strEnteteH1 = "Affichage de la liste";
 }
 
+$arrListe = array();
+$arrListe['id_liste'] = $intIdListe;
+$arrListe['nom_liste'] = "";
+$arrListe['id_couleur'] = 0;
+$arrListe['id_utilisateur'] = $intIdUtilisateur;
+$arrListe['nom_couleur_fr'] = "";
+
+if ($strCodeOperation === "modifier") {
+    /* Requête pour obtenir les info de la liste */
+    $strRequete = "SELECT *
+                FROM t_liste 
+                WHERE id_liste = :idListe";
+
+    $pdosResultat = $pdoConnexion->prepare($strRequete);
+    $pdosResultat->bindValue(':idListe', $intIdListe);
+    $pdosResultat->execute();
+    $arrListe = $pdosResultat->fetch(PDO::FETCH_ASSOC);
+    $pdosResultat->closecursor();
+}
+
 /* Requête pour les couleurs */
 $strRequete = "SELECT * 
                 FROM t_couleur";
@@ -51,6 +71,21 @@ function simplifierTexte($p_couleur)
     $transliterator = Transliterator::create('Any-latin; Latin-ASCII');
 
     return $transliterator->transliterate($resultat);
+}
+
+/**
+ * @param $valeurRadio
+ * @param $nomRadio
+ * @return string
+ */
+function ecrireChecked($valeurRadio, $nomRadio)
+{
+    $strCocher = "";
+    global $arrListe;
+    if ((int)$valeurRadio == $arrListe[$nomRadio]) {
+        $strCocher = 'checked="checked"';
+    }
+    return $strCocher;
 }
 
 ?>
@@ -81,6 +116,12 @@ function simplifierTexte($p_couleur)
 <main class="main" id="main">
     <div class="main__containeur">
 
+        <?php
+        echo "<p>Message d'erreur : $strMessageErreur</p>";
+        echo "<p>Code d'erreur : $strCodeErreur</p>";
+        echo "<p>Code d'opération : $strCodeOperation</p> <br>";
+        ?>
+
         <a href="<?php echo $niveau ?>" class="lien-retour">Retour à l'accueil</a>
 
         <h1><?php echo $strEnteteH1 ?></h1>
@@ -90,7 +131,7 @@ function simplifierTexte($p_couleur)
             <ul class="form__containeur flex">
                 <li class="form__item">
                     <label for="nom_liste">Nom de la liste :</label>
-                    <input type="text" name="nom_liste" id="nom_liste" value="">
+                    <input type="text" name="nom_liste" id="nom_liste" value="<?php echo $arrListe['nom_liste'] ?>">
                 </li>
                 <li class="form__item">
                     <p class="couleur-liste__label">Couleur de la liste :</p>
@@ -102,6 +143,7 @@ function simplifierTexte($p_couleur)
                                        class="fond-radio liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>">
                                 </label>
                                 <input type="radio"
+                                        <?php echo ecrireChecked("$couleur[id_couleur]", "id_couleur") ?>
                                        aria-label="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
                                        title="Couleur <?php echo $couleur['nom_couleur_fr'] ?>"
                                        class="visually-hidden liste-<?php echo simplifierTexte($couleur['nom_couleur_fr']) ?>"
